@@ -2,7 +2,7 @@
 const Course = require('../models/Course');
 const { mutipleMongooseToObject } = require('../../util/mongoose');
 
-class SiteController {
+class CourseController {
 
     //[GET] /
     index(req, res, next) {
