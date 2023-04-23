@@ -1,13 +1,13 @@
-// const newsRouter = require('./news');
-// const meRouter = require('./me');
-// const coursesRouter = require('./courses');
+const bookRouter = require('./book');
+// const storeRouter = require('./store');
 const siteRouter = require('./site');
+const beverageRouter = require('./beverage')
+
 
 function route(app) {
     
-    // app.use('/news', newsRouter);
-    // app.use('/me', meRouter);
-    // app.use('/courses', coursesRouter);
+    app.use('/book', bookRouter);
+    app.use('/beverage', beverageRouter);
     app.use('/', siteRouter);
 
 }

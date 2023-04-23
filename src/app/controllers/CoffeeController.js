@@ -1,9 +1,9 @@
 
-class TeasController {
+class CoffeeController {
 
     //[GET] /news
     index(req, res) {
-        res.render('tea');
+        res.render('/coffee');
     }
 
     //[GET] /news/:slug
@@ -12,4 +12,4 @@ class TeasController {
     }
 }
 
-module.exports = new TeasController;
+module.exports = new CoffeeController;

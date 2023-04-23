@@ -1,6 +1,6 @@
 // const { index } = require("./NewsController");
 const Beverage = require('../models/Beverages');
-const { mutipleMongooseToObject } = require('../../util/mongoose');
+const { multipleMongooseToObject } = require('../../util/mongoose');
 const Books = require('../models/Books');
 
 class SiteController {
@@ -9,25 +9,20 @@ class SiteController {
     index(req, res, next) {
         Beverage.find({})
             .then(beverages => {
-                res.send({
-                    beverages: mutipleMongooseToObject(beverages)
-                });
+                res.send({ beverages: multipleMongooseToObject(beverages)});
             })
             .catch(next);
+    }
 
+    abc(req, res, next) {
         Books.find({})
             .then(books => {
                 res.send({
-                    books: mutipleMongooseToObject(books)
+                    books: multipleMongooseToObject(books)
                 });
             })
             .catch(next);
-        
     }
 
-    //[GET] /search
-    // search(req, res) {
-    //     res.render('search');
-    // }
 }
 module.exports = new SiteController;
